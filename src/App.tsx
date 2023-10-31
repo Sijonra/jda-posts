@@ -1,7 +1,8 @@
 import "./App.scss";
+import PostsPage from "./pages/PostsPage/PostsPage";
 
 function App() {
-  return <></>;
+  return <PostsPage />;
 }
 
 export default App;
