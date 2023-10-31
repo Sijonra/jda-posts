@@ -1,27 +1,33 @@
-# React + TypeScript + Vite
+### DECOMPOSITION
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Preparing project styles
 
-Currently, two official plugins are available:
+      1.1[JDA-0101] create scss mixins/variables/normalize/fonts
+      1.2[JDA-0102]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<!-- 1. Создание компонента "Сетка постов"
+   Создать компонент, который будет отображать посты на экране.
+2. Использование API для получения данных
+   Использовать API https://jsonplaceholder.typicode.com/ для получения данных о постах.
+3. Создание компонентов для вёрстки
+   Создать следующие компоненты:
+   Компонент выпадающего списка авторов.
+   Компонент текстового поля для ввода слов, разделенных запятыми.
+   Компонент галочки для выбора завершенных статей.
+4. Создание контекста данных
+   Создать контекст данных, который будет хранить информацию о постах и состоянии фильтрации. Эти данные будут храниться на верхнем уровне приложения и передаваться через useContext.
+5. Реализация фильтра
+   Реализовать фильтр согласно следующим требованиям:
+   Создать выпадающий список авторов.
+   Создать текстовое поле для ввода слов, разделенных запятыми.
+   Создать галочку для выбора завершенных статей.
+   При изменении состояния выпадающего списка авторов или галочки, выполнять поиск сразу.
+   При вводе в текстовое поле начинать поиск с задержкой в 500 миллисекунд (используя debounce).
+6. Реализация алгоритма поиска
+   Реализовать алгоритм поиска согласно следующим правилам:
+   Если указан автор, ожидать точное соответствие по полному имени автора.
+   Если галочка "завершенные статьи" активирована, выводить только завершенные статьи.
+   Разделить строку, введенную в текстовое поле, на слова по пробелам и производить поиск данных слов как в заголовке, так и в теле поста.
+   Если найдено хотя бы одно слово, добавить соответствующую запись в результаты поиска.
+7. Обработка отсутствия результатов
+   В случае отсутствия результатов поиска, выводить сообщение "По вашему запросу ничего не найдено". -->
