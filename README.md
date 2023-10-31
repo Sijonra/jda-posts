@@ -5,6 +5,12 @@
       1.1[JDA-0101] create scss mixins/variables/normalize/fonts
       1.2[JDA-0102] adding components from jda-ui-kit
 
+## 2. Posts page layout
+
+      2.1[JDA-0201] create posts page
+      2.2[JDA-0202] layout for posts page using components from jda-ui-kit
+
+## 3.
 
 <!-- 1. Создание компонента "Сетка постов"
    Создать компонент, который будет отображать посты на экране.
