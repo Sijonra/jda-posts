@@ -3,7 +3,8 @@
 ## 1. Preparing project styles
 
       1.1[JDA-0101] create scss mixins/variables/normalize/fonts
-      1.2[JDA-0102]
+      1.2[JDA-0102] adding components from jda-ui-kit
+
 
 <!-- 1. Создание компонента "Сетка постов"
    Создать компонент, который будет отображать посты на экране.
