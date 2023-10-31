@@ -1,0 +1,35 @@
+@import "../../styles/bundle.scss";
+
+.checkbox {
+  display: block;
+  position: relative;
+  color: $color-text-default;
+  font-family: $font-SF-PRO-TEXT;
+  font-size: 12px;
+  font-weight: 500;
+  input {
+    appearance: none;
+  }
+
+  &__item {
+    position: absolute;
+    width: 1.33em;
+    height: 1.33em;
+    margin-left: 0.4em;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23filter0_i_13_38)"><rect width="16" height="16" rx="3" fill="white"/><rect width="16" height="16" rx="3" fill="url(%23paint0_linear_13_38)"/></g><rect x="0.5" y="0.5" width="15" height="15" rx="2.5" stroke="%23435A6F" stroke-opacity="0.14"/><defs><filter id="filter0_i_13_38" x="0" y="-1" width="16" height="17" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="-1"/><feGaussianBlur stdDeviation="0.5"/><feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/><feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.352941 0 0 0 0 0.435294 0 0 0 0.09 0"/><feBlend mode="normal" in2="shape" result="effect1_innerShadow_13_38"/></filter><linearGradient id="paint0_linear_13_38" x1="0" y1="0" x2="0" y2="16" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="1" stop-color="%23F5F6F7"/></linearGradient></defs></svg>');
+  }
+
+  input:checked + .checkbox__item {
+    background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23filter0_i_13_44)"><rect width="16" height="16" rx="3" fill="url(%23paint0_linear_13_44)"/></g><rect x="0.5" y="0.5" width="15" height="15" rx="2.5" stroke="%23002242" stroke-opacity="0.2"/><path d="M12 4.5C11.72 4.5 11.47 4.61 11.29 4.79L7 9.09L4.71 6.79C4.53 6.61 4.28 6.5 4 6.5C3.45 6.5 3 6.95 3 7.5C3 7.78 3.11 8.03 3.29 8.21L6.29 11.21C6.47 11.39 6.72 11.5 7 11.5C7.28 11.5 7.53 11.39 7.71 11.21L12.71 6.21C12.89 6.03 13 5.78 13 5.5C13 4.95 12.55 4.5 12 4.5Z" fill="white"/><defs><filter id="filter0_i_13_44" x="0" y="-1" width="16" height="17" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="-1"/><feGaussianBlur stdDeviation="0.5"/><feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/><feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.352941 0 0 0 0 0.435294 0 0 0 0.2 0"/><feBlend mode="normal" in2="shape" result="effect1_innerShadow_13_44"/></filter><linearGradient id="paint0_linear_13_44" x1="16" y1="16" x2="16" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="%23116AB8"/><stop offset="1" stop-color="%230788DE"/></linearGradient></defs></svg>');
+  }
+
+  input:disabled + .checkbox__item {
+    background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.5"><g filter="url(%23filter0_i_13_56)"><rect width="16" height="16" rx="3" fill="%23E4E7EB"/></g><rect x="0.5" y="0.5" width="15" height="15" rx="2.5" stroke="%23435A6F" stroke-opacity="0.14"/></g><defs><filter id="filter0_i_13_56" x="0" y="-1" width="16" height="17" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="-1"/><feGaussianBlur stdDeviation="0.5"/><feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/><feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.352941 0 0 0 0 0.435294 0 0 0 0.09 0"/><feBlend mode="normal" in2="shape" result="effect1_innerShadow_13_56"/></filter></defs></svg>');
+  }
+
+  input:disabled:checked + .checkbox__item {
+    background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.5"><g filter="url(%23filter0_i_13_62)"><rect width="16" height="16" rx="3" fill="%23E4E7EB"/></g><rect x="0.5" y="0.5" width="15" height="15" rx="2.5" stroke="%23435A6F" stroke-opacity="0.14"/></g><g opacity="0.24"><path d="M12 4.5C11.72 4.5 11.47 4.61 11.29 4.79L7 9.09L4.71 6.79C4.53 6.61 4.28 6.5 4 6.5C3.45 6.5 3 6.95 3 7.5C3 7.78 3.11 8.03 3.29 8.21L6.29 11.21C6.47 11.39 6.72 11.5 7 11.5C7.28 11.5 7.53 11.39 7.71 11.21L12.71 6.21C12.89 6.03 13 5.78 13 5.5C13 4.95 12.55 4.5 12 4.5Z" fill="%23425A70"/></g><defs><filter id="filter0_i_13_62" x="0" y="-1" width="16" height="17" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="-1"/><feGaussianBlur stdDeviation="0.5"/><feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/><feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.352941 0 0 0 0 0.435294 0 0 0 0.09 0"/><feBlend mode="normal" in2="shape" result="effect1_innerShadow_13_62"/></filter></defs></svg>');
+  }
+}

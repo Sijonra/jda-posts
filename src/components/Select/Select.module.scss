@@ -1,0 +1,22 @@
+@import "../../styles/bundle.scss";
+
+.select-wrapper {
+  font-size: 12px;
+}
+
+.select {
+  min-width: 280px;
+  outline: none;
+  padding: 0.75em 0 0.75em 1em;
+  font-family: $font-SF-PRO-TEXT;
+  color: $color-text-default;
+  border-radius: 3px;
+  border: 1px solid rgba(67, 90, 111, 0.14);
+  box-shadow: 0px -1px 1px 0px rgba(67, 90, 111, 0.09) inset;
+  appearance: none;
+  background-color: linear-gradient(0deg, #f4f5f7 0%, #fff 100%), #fff;
+  background: url("data:image/svg+xml;utf8,<svg width='14' height='14' viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'><path d='M10.5 5.25C10.5 5.005 10.3075 4.8125 10.0625 4.8125H3.9375C3.6925 4.8125 3.5 5.005 3.5 5.25C3.5 5.36375 3.54375 5.46 3.61375 5.53875L6.67625 9.03875C6.755 9.12625 6.86875 9.1875 7 9.1875C7.13125 9.1875 7.245 9.12625 7.32375 9.03875L10.3863 5.53875C10.4562 5.46 10.5 5.36375 10.5 5.25Z' fill='black'/></svg>")
+    no-repeat;
+
+  background-position: right 10px top 50%;
+}
