@@ -1,1 +1,30 @@
 @import "../../styles/bundle.scss";
+
+.posts-page {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  &__search-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-bottom: 40px;
+
+    div {
+      margin-right: 40px;
+    }
+  }
+}
+
+.search-bar {
+  &__select {
+    background: $color-white;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
