@@ -19,11 +19,6 @@
 
 .cards {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
-
-  &__card {
-    max-width: 200px;
-  }
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }

@@ -2,7 +2,7 @@ import style from "./PostsPage.module.scss";
 import Input from "../../components/Input/Input";
 import Select from "../../components/Select/Select";
 import Checkbox from "../../components/Checkbox/Checkbox";
-import Card from "../../components/Card/Card";
+import Post from "../../components/Post/Post";
 
 const posts = [
   {
@@ -144,17 +144,7 @@ const PostsPage = () => {
         </div>
         <div className={style["cards"]}>
           {posts.map((post) => {
-            return (
-              <div className={style["card__item"]}>
-                <Card
-                  className={style["cards__card"]}
-                  elevation={1}
-                  title={post.title.toString()}
-                >
-                  {post.body}
-                </Card>
-              </div>
-            );
+            return <Post post={post} />;
           })}
         </div>
       </div>
