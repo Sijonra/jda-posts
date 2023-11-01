@@ -2,6 +2,7 @@ import style from "./Post.module.scss";
 import Card from "../../components/Card/Card";
 import Heading from "../../components/Heading/Heading";
 import Paragraph from "../../components/Paragraph/Paragraph";
+import Badge from "../Badge/Badge";
 import { FC } from "react";
 
 interface PostProps {
@@ -22,6 +23,13 @@ const Post: FC<PostProps> = ({ post }) => {
           <Paragraph className={style["card__text"]} type="medium">
             {post.body}
           </Paragraph>
+          <Badge
+            type="badge"
+            theme="solid"
+            color="yellow"
+            text={"author " + post.id}
+            className={style["card__badge"]}
+          />
         </Card>
       </div>
     </>

@@ -139,8 +139,12 @@ const PostsPage = () => {
           }
         >
           <Input type="search" />
-          <Select name="Authors" options={["1", "2", "3"]} />
-          <Checkbox isDisabled={false} isChecked={false} />
+          <Select
+            className={style["search-bar__select"]}
+            name="Authors"
+            options={["1", "2", "3"]}
+          />
+          <Checkbox label="пост завершен" isDisabled={false} isChecked={true} />
         </div>
         <div className={style["cards"]}>
           {posts.map((post) => {
