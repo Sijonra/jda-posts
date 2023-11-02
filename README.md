@@ -10,7 +10,10 @@
       2.1[JDA-0201] create posts page
       2.2[JDA-0202] layout for posts page using components from jda-ui-kit
 
-## 3.
+## 3. Getting data from server
+
+      3.1[JDA-0301] create post request to api
+      3.2[JDA-0302] create authors request to api
 
 <!-- 1. Создание компонента "Сетка постов"
    Создать компонент, который будет отображать посты на экране.
