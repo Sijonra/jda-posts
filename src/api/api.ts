@@ -1,13 +1,11 @@
 export const appApi = {
-  getPosts: () => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+  getPosts: async () => {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+    return await response.json()
   },
 
-  getUsers: () => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+  getUsers: async () => {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users")
+    return await response.json();
   },
 };
