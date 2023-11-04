@@ -12,7 +12,7 @@ const Select: FC<SelectProps> = ({ name, options, className }) => {
     <div className={style["select-wrapper"] + " " + className}>
       <select className={style["select"]} name={name} id="">
         {options.map((item) => {
-          return <option value={item}>{item}</option>;
+          return <option key={item} value={item}>{item}</option>;
         })}
       </select>
     </div>
