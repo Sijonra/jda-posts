@@ -6,7 +6,7 @@ import Badge from "../Badge/Badge";
 import { FC } from "react";
 
 interface PostProps {
-  post: any;
+  post: {title: string, body: string, id:number};
 }
 
 const Post: FC<PostProps> = ({ post }) => {
