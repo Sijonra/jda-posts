@@ -14,8 +14,8 @@
 
       3.1[JDA-0301] create post request to api
       3.2[JDA-0302] create authors request to api
-      3.3[JDA-0303] storage pots/authors data in App.tsx
-      3.4[JDA-0404] data from store
+      3.3[JDA-0303] storing pots/authors data in App.tsx
+      3.4[JDA-0404] getting data in child components using ReactContext
 
 <!-- 1. Создание компонента "Сетка постов"
    Создать компонент, который будет отображать посты на экране.

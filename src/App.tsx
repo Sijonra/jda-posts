@@ -1,7 +1,7 @@
 import "./App.scss";
 import { appApi } from "./api/api";
 import PostsPage from "./pages/PostsPage/PostsPage";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -18,6 +18,9 @@ function App() {
 
    }, []);
 
+  useEffect(()=>{
+    console.log(posts, users)
+  },[posts, users])
 
   return (
       <PostsPage />
