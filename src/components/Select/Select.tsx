@@ -8,10 +8,13 @@ interface SelectProps {
 }
 
 const Select: FC<SelectProps> = ({ name, options, className }) => {
+
+  const updatedOptions = ["All", ...options];
+
   return (
     <div className={style["select-wrapper"] + " " + className}>
       <select className={style["select"]} name={name} id="">
-        {options.map((item) => {
+        {updatedOptions.map((item) => {
           return <option key={item} value={item}>{item}</option>;
         })}
       </select>

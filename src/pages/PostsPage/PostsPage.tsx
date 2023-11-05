@@ -1,7 +1,7 @@
 import style from "./PostsPage.module.scss";
 import Input from "../../components/Input/Input";
 import Select from "../../components/Select/Select";
-import Checkbox from "../../components/Checkbox/Checkbox";
+// import Checkbox from "../../components/Checkbox/Checkbox";
 import Post from "../../components/Post/Post";
 import {useContext} from "react";
 import {PostsDataContext, UsersDataContext} from "../../App";
@@ -29,7 +29,7 @@ const PostsPage = () => {
               })
             }
           />
-          <Checkbox label="пост завершен" isDisabled={false} isChecked={true} />
+          {/* <Checkbox label="пост завершен" isDisabled={false} isChecked={true} /> */}
         </div>
         <div className={style["cards"]}>
         {posts.map((post) => {
