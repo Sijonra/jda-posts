@@ -10,7 +10,7 @@ const PostsPage = () => {
 
   const posts = useContext(PostsDataContext);
   const users = useContext(UsersDataContext);
-
+  
   return (
     <section className={style["posts-page"]}>
       <div className={style["post-page__inner"]}>
@@ -32,8 +32,9 @@ const PostsPage = () => {
           <Checkbox label="пост завершен" isDisabled={false} isChecked={true} />
         </div>
         <div className={style["cards"]}>
-          {posts.map((post) => {
-            return <Post key={post.id} post={post} />;
+        {posts.map((post) => {
+            const user = users.find((u) => u.id === post.userId);
+            return user ? <Post key={post.id} user={user} post={post} /> : null;
           })}
         </div>
       </div>

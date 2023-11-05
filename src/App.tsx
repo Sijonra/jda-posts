@@ -13,7 +13,7 @@ export interface PostInterface {
   userId: number;
 }
 
-interface UserInterface {
+export interface UserInterface {
   id: number,
   address: string,
   company: {bs: string, catchPhrase: string, name:string},
