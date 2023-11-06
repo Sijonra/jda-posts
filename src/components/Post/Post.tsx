@@ -4,12 +4,18 @@ import Heading from "../../components/Heading/Heading";
 import Paragraph from "../../components/Paragraph/Paragraph";
 import Badge from "../Badge/Badge";
 import { FC } from "react";
+import {UserInterface} from '../../App'
 
 interface PostProps {
-  post: {title: string, body: string, id:number};
+  post: {title: string, body: string, id:number,};
+  user: UserInterface;
 }
 
-const Post: FC<PostProps> = ({ post }) => {
+const Post: FC<PostProps> = ({ post, user }) => {
+
+  // console.log(users)
+  // console.log(user.id)
+  
   return (
     <>
       <div className={style["post"]}>
@@ -27,7 +33,7 @@ const Post: FC<PostProps> = ({ post }) => {
             type="badge"
             theme="solid"
             color="yellow"
-            text={"author " + post.id}
+            text={`Author: ${user.name}`}
             className={style["card__badge"]}
           />
         </Card>
