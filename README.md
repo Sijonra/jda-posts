@@ -20,6 +20,9 @@
 ## 4. Sorting data from server
 
       4.1[JDA-0401] sorting posts by chosen author
+      4.2[JDA-0402] sorting posts by search bar using regExp
+      4.3[JDA-0403] create debounce for search request
+      
 
 <!-- 1. Создание компонента "Сетка постов"
    Создать компонент, который будет отображать посты на экране.

@@ -12,7 +12,6 @@ export interface PostInterface {
   id: number;
   userId: number;
 }
-
 export interface UserInterface {
   id: number,
   address: string,
