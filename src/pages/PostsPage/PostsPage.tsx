@@ -11,11 +11,16 @@ const PostsPage = () => {
   const posts = useContext(PostsDataContext);
   const users = useContext(UsersDataContext);
   const [selectedAuthor, setSelectedAuthor] = useState('All');
+  const [inputValue, setInputValue] = useState("");
 
   const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) =>{
     setSelectedAuthor(event.target.value)
   }
 
+  const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
+    console.log(event.target.value)
+    setInputValue(event.target.value)
+  }
   const filteredPosts = selectedAuthor === "All" ? posts : posts.filter((post)=>{
     const user = users.find((u) => u.id === post.userId);
     return user && user.name === selectedAuthor;
@@ -29,7 +34,7 @@ const PostsPage = () => {
             style["posts-page__search-bar"] + " " + style["search-bar"]
           }
         >
-          <Input type="search" />
+          <Input type="search" value={inputValue} onChange={onInputChange} />
           <Select
             className={style["search-bar__select"]}
             name="Authors"

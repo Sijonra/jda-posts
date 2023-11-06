@@ -3,9 +3,11 @@ import { FC } from "react";
 
 interface InputProps {
   type?: string;
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: FC<InputProps> = ({ type }) => {
+const Input: FC<InputProps> = ({ type, value, onChange }) => {
   return (
     <div className={style["input"]}>
       {type === "search" && (
@@ -25,7 +27,7 @@ const Input: FC<InputProps> = ({ type }) => {
           />
         </svg>
       )}
-      <input type="text" placeholder="placeholder" />
+      <input value={value} onChange={onChange} type="text" placeholder="placeholder" />
     </div>
   );
 };
