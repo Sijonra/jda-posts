@@ -5,6 +5,7 @@ import Select from "../../components/Select/Select";
 import Post from "../../components/Post/Post";
 import {useContext, useState} from "react";
 import {PostsDataContext, UsersDataContext} from "../../App";
+import debounce from "../../functions/debounce";
 
 const PostsPage = () => {
 
@@ -12,26 +13,33 @@ const PostsPage = () => {
   const users = useContext(UsersDataContext);
   const [selectedAuthor, setSelectedAuthor] = useState('All');
   const [inputValue, setInputValue] = useState("");
+  const [debouncedSearchValue, setDebouncedSearchValue] = useState(inputValue);
 
   const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) =>{
     setSelectedAuthor(event.target.value);
   }
 
   const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
-    setInputValue(event.target.value);
+    const value = event.target.value;
+    setInputValue(value);
+    debounceSearch(value);
   }
   
+  const debounceSearch = debounce((searchValue:string) => {
+    setDebouncedSearchValue(searchValue);
+  }, 500);
+
   const filteredPosts = selectedAuthor === "All" ? posts : posts.filter((post)=>{
     const user = users.find((u) => u.id === post.userId);
     return user && user.name === selectedAuthor;
   })
 
   const finallySortedPosts = filteredPosts.filter((post) => {
-    const searchString = inputValue.toLowerCase();
+    const searchString = debouncedSearchValue.toLowerCase();
     if (searchString === "") {
       return true;
     }
-    const tmp = searchString.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // экранирование
+    const tmp = searchString.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // экранирование специальных символов
     const stringWithSpace = tmp.replace(/,/g, ' ');
     const tmpArray = stringWithSpace.split(/\s+/).filter(word => word.trim() !== "");
     const res = tmpArray.join('|');
@@ -41,9 +49,6 @@ const PostsPage = () => {
   
   return (
     <section className={style["posts-page"]}>
-      {
-        finallySortedPosts.length
-      }
       <div className={style["post-page__inner"]}>
         <div
           className={
