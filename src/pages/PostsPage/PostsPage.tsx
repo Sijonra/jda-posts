@@ -1,8 +1,11 @@
 import style from "./PostsPage.module.scss";
+
 import Input from "../../components/Input/Input";
 import Select from "../../components/Select/Select";
-// import Checkbox from "../../components/Checkbox/Checkbox";
+import Checkbox from "../../components/Checkbox/Checkbox";
+import Heading from "../../components/Heading/Heading";
 import Post from "../../components/Post/Post";
+
 import {useContext, useState} from "react";
 import {PostsDataContext, UsersDataContext} from "../../App";
 import debounce from "../../functions/debounce";
@@ -39,7 +42,7 @@ const PostsPage = () => {
     if (searchString === "") {
       return true;
     }
-    const tmp = searchString.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // экранирование специальных символов
+    const tmp = searchString.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const stringWithSpace = tmp.replace(/,/g, ' ');
     const tmpArray = stringWithSpace.split(/\s+/).filter(word => word.trim() !== "");
     const res = tmpArray.join('|');
@@ -67,7 +70,7 @@ const PostsPage = () => {
             selectedAuthor={selectedAuthor}
             onChange={onSelectChange}
           />
-          {/* <Checkbox label="пост завершен" isDisabled={false} isChecked={true} /> */}
+          <Checkbox label="пост завершен" isDisabled={false} isChecked={true} />
         </div>
         <div className={style["cards"]}>
 
@@ -77,7 +80,7 @@ const PostsPage = () => {
             return user ? <Post key={post.id} user={user} post={post} /> : null;
           })
           :
-          "Нет постов"
+          <Heading type="jumbo">No Posts Found</Heading>
         }
         </div>
       </div>
